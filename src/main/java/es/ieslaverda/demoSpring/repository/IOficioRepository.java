@@ -8,7 +8,7 @@ import java.util.List;
 
 public interface IOficioRepository {
 
-    String getImageUrl()
+    String getImageUrl(int id);
     Oficio getOficioById(int id) throws SQLException;
     List<Oficio> getAllOficios() throws SQLException;
 }

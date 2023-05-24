@@ -1,6 +1,5 @@
 package es.ieslaverda.demoSpring.repository.model;
 
-
 import lombok.*;
 
 import java.util.Objects;
@@ -12,23 +11,23 @@ import java.util.Objects;
 @NoArgsConstructor
 @ToString
 @Builder
+public class Oficio {
 
-public class Usuario {
-    private int id;
-    private String nombre;
-    private String apellidos;
     private int idOficiio;
+    private String descripcion;
+    private String imageUrl;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Usuario usuario = (Usuario) o;
-        return id == usuario.id;
+        Oficio oficio = (Oficio) o;
+        return idOficiio == oficio.idOficiio;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id);
+        return Objects.hash(idOficiio);
     }
+
 }

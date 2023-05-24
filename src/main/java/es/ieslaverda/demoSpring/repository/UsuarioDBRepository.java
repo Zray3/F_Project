@@ -82,7 +82,7 @@ public class UsuarioDBRepository implements IUsuarioRepository {
 
     public List<Usuario> getAllUsuarios() throws SQLException {
         ArrayList<Usuario> usuariosDB = new ArrayList<>();
-        String query = "SELECT * FROM usuarios";
+        String query = "{call obtener_usuarios()}";
 
         try(Connection connection = MyDataSource.getMySQLDataSource().getConnection();
             Statement st = connection.createStatement();

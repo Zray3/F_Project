@@ -1,11 +1,9 @@
 package es.ieslaverda.demoSpring.repository;
 
-import es.ieslaverda.demoSpring.repository.IUsuarioRepository;
 import es.ieslaverda.demoSpring.repository.model.MyDataSource;
 import es.ieslaverda.demoSpring.repository.model.Usuario;
 import org.springframework.stereotype.Repository;
 
-import javax.sql.DataSource;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -95,5 +93,7 @@ public class UsuarioDBRepository implements IUsuarioRepository {
 
         return usuariosDB;
     }
+
+
 
 }

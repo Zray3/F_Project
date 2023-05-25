@@ -13,7 +13,7 @@ import java.util.Objects;
 @Builder
 public class Oficio {
 
-    private int idOficiio;
+    private int idOficio;
     private String descripcion;
     private String imageUrl;
 
@@ -22,12 +22,12 @@ public class Oficio {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Oficio oficio = (Oficio) o;
-        return idOficiio == oficio.idOficiio;
+        return idOficio == oficio.idOficio;
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(idOficiio);
+        return Objects.hash(idOficio);
     }
 
 }

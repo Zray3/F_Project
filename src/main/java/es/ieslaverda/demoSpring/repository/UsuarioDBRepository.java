@@ -87,7 +87,7 @@ public class UsuarioDBRepository implements IUsuarioRepository {
             ResultSet rs = st.executeQuery(query)){
 
             while(rs.next()){
-                usuariosDB.add(Usuario.builder().id(rs.getInt(1)).nombre(rs.getString(2)).apellidos(rs.getString(3)).build());
+                usuariosDB.add(Usuario.builder().id(rs.getInt(1)).nombre(rs.getString(2)).apellidos(rs.getString(3)).idOficiio(rs.getInt(4)).build());
             }
         }
 

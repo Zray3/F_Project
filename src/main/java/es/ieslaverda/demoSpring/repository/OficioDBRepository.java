@@ -18,17 +18,16 @@ public class OficioDBRepository implements IOficioRepository {
         ArrayList<Oficio> oficiosDB = new ArrayList<>();
         String query = "{call obtener_oficios(?)}";
 
-        try(Connection connection = MyDataSource.getMySQLDataSource().getConnection();
-            CallableStatement cs = connection.prepareCall(query);
-            ResultSet rs = cs.executeQuery(query)){
-            cs.setNull(1,0);
-
+        try(Connection connection = MyDataSource.getMySQLDataSource().getConnection(); CallableStatement cs = connection.prepareCall(query)){
+            cs.setNull(1,4);
+            ResultSet rs=cs.executeQuery();
             while(rs.next()){
-                oficiosDB.add(Oficio.builder().idOficio(rs.getInt(1)).descripcion(rs.getString(2)).imageUrl(rs.getString(3)).build());
+                oficiosDB.add(Oficio.builder().idOficio(rs.getInt(1)).descripcion(rs.getString(2)).imageUrl(rs.getString(4)).build());
             }
         }
 
         return oficiosDB;
     }
+
 
 }
